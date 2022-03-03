@@ -4,7 +4,7 @@
 #
 Name     : pypi-networkx
 Version  : 2.7
-Release  : 74
+Release  : 75
 URL      : https://files.pythonhosted.org/packages/46/c7/7d4059af100345541e8e96f75bac3e6fb8c8c9b83d34764cf19e3a8e90a4/networkx-2.7.tar.gz
 Source0  : https://files.pythonhosted.org/packages/46/c7/7d4059af100345541e8e96f75bac3e6fb8c8c9b83d34764cf19e3a8e90a4/networkx-2.7.tar.gz
 Summary  : Python package for creating and manipulating graphs and networks
@@ -14,6 +14,7 @@ Requires: pypi-networkx-license = %{version}-%{release}
 Requires: pypi-networkx-python = %{version}-%{release}
 Requires: pypi-networkx-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
+Patch1: 0001-Fix-for-missing-import.patch
 
 %description
 NetworkX
@@ -59,13 +60,14 @@ python3 components for the pypi-networkx package.
 %prep
 %setup -q -n networkx-2.7
 cd %{_builddir}/networkx-2.7
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1646150100
+export SOURCE_DATE_EPOCH=1646328179
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
