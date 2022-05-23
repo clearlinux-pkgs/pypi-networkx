@@ -4,7 +4,7 @@
 #
 Name     : pypi-networkx
 Version  : 2.8.2
-Release  : 79
+Release  : 80
 URL      : https://files.pythonhosted.org/packages/4a/e2/1f9d6cf8562cf2bde58c102db70fe48d2d9652ec256f86bab6b279601b0d/networkx-2.8.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/4a/e2/1f9d6cf8562cf2bde58c102db70fe48d2d9652ec256f86bab6b279601b0d/networkx-2.8.2.tar.gz
 Summary  : Python package for creating and manipulating graphs and networks
@@ -70,7 +70,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1653336394
+export SOURCE_DATE_EPOCH=1653346600
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
