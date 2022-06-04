@@ -1,5 +1,5 @@
 PKG_NAME := pypi-networkx
-URL = https://files.pythonhosted.org/packages/4a/e2/1f9d6cf8562cf2bde58c102db70fe48d2d9652ec256f86bab6b279601b0d/networkx-2.8.2.tar.gz
+URL = https://files.pythonhosted.org/packages/78/6c/85c0664365d32a32806bd12d46ea5dc466aa3aa7e8086e5daf3505b8cf33/networkx-2.8.3.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
