@@ -4,7 +4,7 @@
 #
 Name     : pypi-networkx
 Version  : 2.8.6
-Release  : 88
+Release  : 89
 URL      : https://files.pythonhosted.org/packages/d9/c6/ad9dc9195c0e5d8879d2a28667aa45e087631576b40f9c954a086693a36d/networkx-2.8.6.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d9/c6/ad9dc9195c0e5d8879d2a28667aa45e087631576b40f9c954a086693a36d/networkx-2.8.6.tar.gz
 Summary  : Python package for creating and manipulating graphs and networks
