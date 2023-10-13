@@ -5,7 +5,7 @@
 #
 Name     : pypi-networkx
 Version  : 3.1
-Release  : 97
+Release  : 98
 URL      : https://files.pythonhosted.org/packages/fd/a1/47b974da1a73f063c158a1f4cc33ed0abf7c04f98a19050e80c533c31f0c/networkx-3.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/fd/a1/47b974da1a73f063c158a1f4cc33ed0abf7c04f98a19050e80c533c31f0c/networkx-3.1.tar.gz
 Summary  : Python package for creating and manipulating graphs and networks
