@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : pypi-networkx
-Version  : 3.4.1
-Release  : 104
-URL      : https://files.pythonhosted.org/packages/36/2b/20ad9eecdda3f1b0dc63fb8f82d2ea99163dbca08bfa392594fc2ed81869/networkx-3.4.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/36/2b/20ad9eecdda3f1b0dc63fb8f82d2ea99163dbca08bfa392594fc2ed81869/networkx-3.4.1.tar.gz
+Version  : 3.4.2
+Release  : 105
+URL      : https://files.pythonhosted.org/packages/fd/1d/06475e1cd5264c0b870ea2cc6fdb3e37177c1e565c43f56ff17a10e3937f/networkx-3.4.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/fd/1d/06475e1cd5264c0b870ea2cc6fdb3e37177c1e565c43f56ff17a10e3937f/networkx-3.4.2.tar.gz
 Summary  : Python package for creating and manipulating graphs and networks
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -58,11 +58,11 @@ python3 components for the pypi-networkx package.
 
 
 %prep
-%setup -q -n networkx-3.4.1
-cd %{_builddir}/networkx-3.4.1
+%setup -q -n networkx-3.4.2
+cd %{_builddir}/networkx-3.4.2
 %patch -P 1 -p1
 pushd ..
-cp -a networkx-3.4.1 buildavx2
+cp -a networkx-3.4.2 buildavx2
 popd
 
 %build
@@ -70,7 +70,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1728920507
+export SOURCE_DATE_EPOCH=1729521074
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
