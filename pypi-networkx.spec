@@ -7,12 +7,13 @@
 #
 Name     : pypi-networkx
 Version  : 3.5
-Release  : 108
+Release  : 109
 URL      : https://files.pythonhosted.org/packages/6c/4f/ccdb8ad3a38e583f214547fd2f7ff1fc160c43a75af88e6aec213404b96a/networkx-3.5.tar.gz
 Source0  : https://files.pythonhosted.org/packages/6c/4f/ccdb8ad3a38e583f214547fd2f7ff1fc160c43a75af88e6aec213404b96a/networkx-3.5.tar.gz
 Summary  : Python package for creating and manipulating graphs and networks
 Group    : Development/Tools
 License  : BSD-3-Clause
+Requires: pypi-networkx-license = %{version}-%{release}
 Requires: pypi-networkx-python = %{version}-%{release}
 Requires: pypi-networkx-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
@@ -28,6 +29,14 @@ NetworkX
 .. image::
 https://github.com/networkx/networkx/workflows/test/badge.svg?branch=main
 :target: https://github.com/networkx/networkx/actions?query=workflow%3Atest
+
+%package license
+Summary: license components for the pypi-networkx package.
+Group: Default
+
+%description license
+license components for the pypi-networkx package.
+
 
 %package python
 Summary: python components for the pypi-networkx package.
@@ -61,7 +70,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1748528011
+export SOURCE_DATE_EPOCH=1748535003
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -100,6 +109,8 @@ ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/pypi-networkx
+cp %{_builddir}/networkx-%{version}/LICENSE.txt %{buildroot}/usr/share/package-licenses/pypi-networkx/9efcc707aa92127d1027c4fb4f8ebe19a90a5cc3 || :
 python3 -m installer --destdir=%{buildroot} dist/*.whl
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -116,6 +127,10 @@ popd
 
 %files
 %defattr(-,root,root,-)
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/pypi-networkx/9efcc707aa92127d1027c4fb4f8ebe19a90a5cc3
 
 %files python
 %defattr(-,root,root,-)
